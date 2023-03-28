@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  margin: 30px 15vw;
+  background-color: rgb(29, 29, 93);
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: clamp(50%, 720px, 80%);
+  border-radius: 15px;
+}
+
+.calc-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 15px;
+}
+
+.display {
+  background-color: lightgrey;
+  flex: 1;
+  min-height: 10rem;
+  box-shadow: inset 0px -3px 1px 1px black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.temps {
+  flex: 1;
+  width: 100%;
+  padding: 15px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nums {
+  flex: 1;
+  text-align: right;
+  vertical-align: middle;
+  font-size: 1.5rem;
+}
+
+.ops {
+  width: clamp(min-content, 3rem, 10%);
+  text-align: right;
+  vertical-align: middle;
+  font-size: 1.5rem;
+}
+
+.outputs {
+  flex: 3;
+  width: 100%;
+  padding: 15px;
+  text-align: right;
+  vertical-align: middle;
+  font-size: 3rem;
+}
+
+.calc-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 3;
+}
+
+.buttons {
+  display: grid;
+  grid-template:
+    'ac c sign plus'
+    'b1 b2 b3 minus'
+    'b4 b5 b6 time'
+    'b7 b8 b9 divide'
+    'dec b0 mod equals';
+  gap: 5px;
+}
+
+#ac {
+  grid-area: ac;
+}
+
+#c {
+  grid-area: c;
+}
+
+#sign {
+  grid-area: sign;
+}
+
+#mod {
+  grid-area: mod;
+}
+
+#b1 {
+  grid-area: b1;
+}
+
+#b2 {
+  grid-area: b2;
+}
+
+#b3 {
+  grid-area: b3;
+}
+
+#b4 {
+  grid-area: b4;
+}
+
+#b5 {
+  grid-area: b5;
+}
+
+#b6 {
+  grid-area: b6;
+}
+
+#b7 {
+  grid-area: b7;
+}
+
+#b8 {
+  grid-area: b8;
+}
+
+#b9 {
+  grid-area: b9;
+}
+
+#b0 {
+  grid-area: b0;
+}
+
+#dec {
+  grid-area: dec;
+}
+
+#plus {
+  grid-area: plus;
+}
+
+#minus {
+  grid-area: minus;
+}
+
+#time {
+  grid-area: time;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#equals {
+  grid-area: equals;
+}
+
+.btn {
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: transparent;
+
+  border-radius: 15px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 5rem;
+  font-weight: 500;
+}
+
+.btn:hover {
+  cursor: pointer;
+  border-color: black;
+}
+
+.btn.inactive:hover {
+  cursor: auto;
+  border-color: transparent;
+}
+
+.btn.func {
+  background-color: rgb(55, 147, 186);
+}
+
+.btn.num {
+  background-color: rgb(244, 239, 239);
+}
+
+.btn.op {
+  background-color: rgb(204, 69, 69);
+}
+
+#equals.inactive {
+  background-color: rgba(141, 38, 38, 0.6);
+}
+
+#dec.inactive {
+  background-color: rgba(209, 202, 202, 0.6);
+}
